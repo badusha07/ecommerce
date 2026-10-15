@@ -3,54 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Creative Studio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FrostyFizz | Refresh Your World</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+
+        .cta-btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+            color: white;
+            min-height: 80vh;
+        }
+
+        .hero-content {
+            max-width: 500px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            background: white;
+            color: #ff5722;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-image img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .product-card p {
+            color: #777;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .flavor-badge {
+            display: inline-block;
+            background: #fff3e0;
+            color: #ff9800;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 8%;
+            font-weight: 300;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            nav ul {
+                display: none; /* Can add a mobile hamburger menu here */
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header class="navbar">
-        <div class="logo">Nexus</div>
-        <nav class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#features">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact" class="btn-nav">Contact Us</a>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo">FrostyFizz 🥤</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Flavors</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-    </header>
+        <a href="#products" class="cta-btn">Order Now</a>
+    </main>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1>We craft digital experiences that inspire.</h1>
-            <p>Transform your brand with cutting-edge design, robust development, and strategic marketing tailored for the modern web.</p>
-            <a href="#contact" class="btn-primary">Get Started</a>
+            <h1>Quench Your Thirst with Pure Burst</h1>
+            <p>Experience the ultimate wave of icy refreshment with our fruit-infused, bubbly cool drinks. Crafted to lift your mood instantly.</p>
+            <a href="#products" class="hero-btn">Explore Flavors</a>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for a drink graphic or image -->
+            <div style="background: rgba(255,255,255,0.2); width: 300px; height: 350px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">🍹</div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>What We Do</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>UI/UX Design</h3>
-                <p>Intuitive, user-centered interfaces designed to engage audiences and elevate brand loyalty.</p>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Popular Flavors</h2>
+        <p class="section-subtitle">Pick your vibe for the day</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Tangy Orange Zest</h3>
+                <p>A burst of sun-ripened Valencia oranges mixed with crisp, refreshing carbonation.</p>
+                <span class="flavor-badge">Citrus Blast</span>
             </div>
-            <div class="feature-card">
-                <h3>Web Development</h3>
-                <p>Lightning-fast, responsive, and secure websites built using modern web standards.</p>
+            
+            <div class="product-card">
+                <h3>Wild Berry Splash</h3>
+                <p>A sweet and tart fusion of freshly picked strawberries, blueberries, and blackberries.</p>
+                <span class="flavor-badge">Berry Fusion</span>
             </div>
-            <div class="feature-card">
-                <h3>Digital Strategy</h3>
-                <p>Data-driven marketing and SEO strategies designed to maximize your online visibility.</p>
+            
+            <div class="product-card">
+                <h3>Cool Mint Limeade</h3>
+                <p>The ultimate cooler—sharp zesty lime combined with an icy mint finish.</p>
+                <span class="flavor-badge">Super Chill</span>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
-        <p>&copy; 2026 Nexus Creative Studio. All rights reserved.</p>
+    <footer id="contact">
+        <p>&copy; 2026 FrostyFizz Beverages. All rights reserved. Stay Refreshed!</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
